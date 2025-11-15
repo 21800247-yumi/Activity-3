@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>November 15</title>
 </head>
-<body>
-    <div>
-        <h1 id="title" class="text-5xl">Title Title Title</h1>
+<body class="font-serif bg-yellow-50">
+    <div class="flex justify-center p-10">
+        <h1 id="title" class="text-5xl">JavaScript Practice</h1>
     </div>
 
-    <div class="flex gap-7">
-        <button id="b1" class="bg-pink-500 py-2 px-4">log by id using getElementId</button>
-        <button id="b2" class="bg-pink-500 py-2 px-4">log by id using querySelector</button>
-        <button class="b3 bg-pink-500 py-2 px-4">log by class</button>
-        <span class="bg-pink-500 py-2 px-4">log by element</span>
-        <button id="b4" class="bg-pink-500 py-2 px-4">log title</button>
+    <div class="flex gap-7 flex justify-center">
+        <button id="b1" class="bg-pink-50 py-2 px-4 rounded-full">log by id using getElementId</button>
+        <button id="b2" class="bg-pink-100 py-2 px-4 rounded-full">log by id using querySelector</button>
+        <button class="b3 bg-pink-200 py-2 px-4 rounded-full">log by class</button>
+        <span class="bg-pink-300 py-2 px-4 rounded-full">log by element</span>
+        <button id="b4" class="bg-pink-400 py-2 px-4 rounded-full">log title</button>
     </div>
 
+    <div class="p-10 flex gap-7 flex justify-center">
+        <div>
+            <button id="button1" class="bg-gray-300 py-2 px-4 rounded">off</button>
+        </div>
+    </div>
 
     <script>
         let name = 'Naomi'  //changable
@@ -85,6 +90,23 @@
                 console.log(document.getElementById('title').innerText)
             );
         }
+
+        // JavaScript DOM Properties
+        {
+            document.getElementById('button1').addEventListener('click', () => {
+                const button1 = document.getElementById('button1')
+                if(button1.innerText == 'off'){
+                    button1.innerText = 'on'
+                    button1.classList.add('bg-green-200')
+                    button1.classList.remove('bg-gray-300')
+                } else {
+                    button1.innerText = 'off'
+                    button1.classList.remove('bg-green-200')
+                    button1.classList.add('bg-gray-300')
+                }
+            });
+        }
+
 
 
     </script>
