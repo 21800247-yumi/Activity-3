@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="title" class="text-5xl">Title Title Title</h1>
+    </div>
+
+    <div class="flex gap-7">
+        <button id="b1" class="bg-pink-500 py-2 px-4">log by id using getElementId</button>
+        <button id="b2" class="bg-pink-500 py-2 px-4">log by id using querySelector</button>
+        <button class="b3 bg-pink-500 py-2 px-4">log by class</button>
+        <span class="bg-pink-500 py-2 px-4">log by element</span>
+        <button id="b4" class="bg-pink-500 py-2 px-4">log title</button>
+    </div>
+
+
+    <script>
+        let name = 'Naomi'  //changable
+        const age = 20      // constant
+        const data = {
+            id: 21800247,
+            birthmonth: 'October',
+            age: 20,
+            school: 'USC'
+        }
+
+        // function
+        function greet(){
+            console.log(`Hi my name is ${name}`)
+        }
+
+        // function with parameters
+        function reply(recipient1, recipient2){
+            console.log(`Nice meeting you, ${recipient1} and ${recipient2}!`)
+        }
+
+        //conditions
+            //if-else
+        function priceCheck(price){
+            if(price < 200) {
+                console.log('Okay')
+            } else if(price == 200){
+                console.log('Too much')
+            } else {
+                console.log('Too expensive')
+            }
+        }
+
+            //switchcase
+        function buyFruit(fruit){
+            if(fruit == 'apple'){
+                console.log(100)
+            } else if(fruit == 'mango') {
+                console.log(200)
+            } else {
+                console.log('out of stock lewl')
+            }
+        }
+
+        // Document Object Model (DOM) methods and Event Listeners
+        {
+            document.getElementById('b1').addEventListener('click', () =>
+                console.log('button `log by id using getElementId` has been clicked')
+            );
+
+            document.querySelector('#b2').addEventListener('click', () =>
+                console.log('button `log by id using querySelector` has been clicked')
+            );
+
+            document.querySelector('.b3').addEventListener('click', () =>
+                console.log('button `log by class` has been clicked')
+            );
+
+            document.querySelector('span').addEventListener('click', () =>
+                console.log('button `log by element` has been clicked')
+            );
+
+            document.getElementById('b4').addEventListener('click', () =>
+                console.log(document.getElementById('title').innerText)
+            );
+        }
+
+
+    </script>
+</body>
+</html>
